@@ -20,7 +20,7 @@ export default function SplashScreen({ onFinish }) {
     useEffect(() => {
         // Step 1: Circle expands
         Animated.timing(circleScale, {
-            toValue: 10,
+            toValue: 15,
             duration: 1000,
             useNativeDriver: true,
         }).start(() => {

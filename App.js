@@ -10,8 +10,11 @@ import SplashScreen from './screens/SplashScreen';
 import LoginScreen from './screens/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
 import PrincipalsScreen from './screens/PrincipalsScreen';
-import AboutUs from './screens/AboutUs';
+import AboutUs from './screens/AboutUsScreen';
 import NewsScreen from './screens/NewsScreen';
+import AboutUsScreen from './screens/AboutUsScreen';
+import PrincipalsDetailScreen from './screens/PrincipalDetailScreen';
+
 
 // Placeholder bottom tab screens
 function SavedScreen() {

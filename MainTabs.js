@@ -47,7 +47,7 @@ export default function MainTabs() {
             screenOptions={{
                 headerShown: false,
                 tabBarStyle: {
-                    height: 60,
+                    height: 70,
                     paddingBottom: 5,
                     paddingTop: 5,
                 },

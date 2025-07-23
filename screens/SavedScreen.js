@@ -73,18 +73,20 @@ export default function SavedScreen({ navigation }) {
 
 const styles = StyleSheet.create({
     container: { flex: 1, backgroundColor: '#fff' },
-    header: {
-        backgroundColor: '#7F0000',
-        paddingTop: 60,
-        paddingBottom: 60,
-        paddingHorizontal: 16,
-        flexDirection: 'row',
-        alignItems: 'center',
-    },
+  header: {
+    width: '100%',
+    height: 70,
+    backgroundColor: '#640000',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+    paddingTop: 10,
+  },
     backButton: {
         position: 'absolute',
         left: 16,
-        top: 60,
+        top: 25,
         zIndex: 1,
     },
     headerTitle: {

@@ -42,17 +42,17 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
     },
-    headerBar: {
-        width: '100%',
-        height: 140,
-        backgroundColor: '#640000',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingTop: 20,
-        paddingHorizontal: 20,
-        position: 'relative',
-    },
+    
+  headerBar: {
+    width: '100%',
+    height: 70,
+    backgroundColor: '#640000',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+    paddingTop: 10,
+  },
     backButton: {
         position: 'absolute',
         left: 20,

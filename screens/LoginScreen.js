@@ -34,13 +34,15 @@ export default function LoginScreen({ navigation }) {
     }, []);
 
     const handleLogin = () => {
-        if (username === 'ojt.admin@email.com' && password === 'password') {
-            navigation.navigate('MainTabs');
-        } else {
-            Alert.alert('Login Failed', 'Incorrect username or password.');
-        }
-    };    
-      const handleFacebookLogin = () => Alert.alert('Not yet available.');
+    if (username === 'ojt.admin@email.com' && password === 'password') {
+        navigation.navigate('MainTabs');
+    } else if (username === 'amatrol@email.com' && password === 'password') {
+        navigation.navigate('HomeScreenAmatrol');
+    } else {
+        Alert.alert('Login Failed', 'Incorrect username or password.');
+    }
+    };
+    const handleFacebookLogin = () => Alert.alert('Not yet available.');
     const handleGoogleLogin = () => Alert.alert('Not yet available.');
     const handleGmailLogin = () => Alert.alert('Not yet available.');
     const handleMicrosoftLogin = () => Alert.alert('Not yet available.');

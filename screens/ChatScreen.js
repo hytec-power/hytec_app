@@ -139,13 +139,14 @@ export default function ChatScreen({ navigation }) {
 const styles = StyleSheet.create({
     container: { flex: 1, backgroundColor: '#fff' },
     header: {
+        width: '100%',
+        height: 70,
         backgroundColor: '#640000',
-        paddingTop: 80,
-        paddingBottom: 60,
-        paddingHorizontal: 16,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
+        paddingHorizontal: 20,
+        paddingTop: 10,
     },
     headerTitle: {
         fontSize: 20,

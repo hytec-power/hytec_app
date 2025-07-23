@@ -42,6 +42,7 @@ import PaymentOptions from './screens/OrderSummary/PaymentOptions';
 import CyberMainScreen from './screens/Cybertech/CyberMainScreen';
 import Cyber2ndScreen from './screens/Cybertech/Cyber2ndScreen';
 import Cyber3rdScreen from './screens/Cybertech/Cyber3rdScreen';
+import Cyber4thScreen from './screens/Cybertech/Cyber4thScreen';
 import { SearchProvider } from './context/SearchContext';
 import { ProfileProvider } from './screens/owp/ProfileContext';
 import HomeScreenAmatrol from './screens/Amatrol/HomeScreenAmatrol';
@@ -129,6 +130,7 @@ export default function App() {
             <Stack.Screen name="CyberMainScreen" component={CyberMainScreen} />
             <Stack.Screen name="Cyber2ndScreen" component={Cyber2ndScreen} />
             <Stack.Screen name="Cyber3rdScreen" component={Cyber3rdScreen} />
+            <Stack.Screen name="Cyber4thScreen" component={Cyber4thScreen} />
             <Stack.Screen name="Owp2ndscreen" component={Owp2ndscreen} />
             <Stack.Screen name="Owp3rdscreen" component={Owp3rdscreen} />
             <Stack.Screen name="OwpMainscreen" component={OwpMainscreen} />

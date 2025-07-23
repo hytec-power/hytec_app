@@ -28,8 +28,8 @@ export default function EhytecMainscreen() {
       <Video
         source={require('../../assets/videos/pepper.mp4')}
         style={styles.buildingVideo}
-        resizeMode="contain"
-        marginTop={-180}
+        resizeMode="cover"
+        shouldPlay  
         isLooping
         isMuted={false}
         useNativeControls={false} // set to true if you want playback controls
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: undefined,
     aspectRatio: 1,
-    backgroundColor: '#000',
+    backgroundColor: '#000'
   },
   content: {
     alignItems: 'center',

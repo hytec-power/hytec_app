@@ -28,7 +28,6 @@ export default function Cyber2ndScreen({ navigation }) {
       <View style={styles.imageSection}>
         {/* Side circular images */}
         <View style={styles.sideCirclesRow}>
-          {/* Left image */}
           <View style={styles.sideCircle}>
             <Image
               source={require('../../assets/images/cyberleft.jpg')}
@@ -36,7 +35,6 @@ export default function Cyber2ndScreen({ navigation }) {
             />
           </View>
 
-          {/* Right image */}
           <View style={styles.sideCircle}>
             <Image
               source={require('../../assets/images/cyberright.jpg')}
@@ -79,13 +77,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   header: {
-    height: 60,
+    height: 100,
     backgroundColor: '#640000',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
     paddingTop: 10,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 99,
   },
   headerText: {
     color: '#fff',
@@ -93,7 +96,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   imageSection: {
-    marginTop: 45,
+    marginTop: 100, // ⬅️ Moved lower
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -117,14 +120,13 @@ const styles = StyleSheet.create({
   },
   logoContainer: {
     position: 'absolute',
-    top: 1,
+    top: -40, // ⬅️ Lowered logo overlay
     width: 290,
     height: 290,
     borderRadius: 150,
     borderWidth: 1,
     borderColor: '#7a0000',
     backgroundColor: '#fff',
-    marginTop: -40,
     justifyContent: 'center',
     zIndex: 10,
     overflow: 'hidden',
@@ -135,24 +137,6 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     borderRadius: 125,
   },
-  scrollContainer: {
-    padding: 20,
-    paddingTop: 50,
-    paddingBottom: 60,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginTop: 30,
-    marginBottom: 10,
-    color: '#000',
-  },
-  description: {
-    fontSize: 14,
-    color: '#444',
-    textAlign: 'justify',
-    marginBottom: 10,
-  },
   button: {
     backgroundColor: '#BC1010',
     paddingVertical: 15,
@@ -161,6 +145,24 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginTop: 30,
     paddingHorizontal: 140,
+  },
+  scrollContainer: {
+    padding: 20,
+    paddingTop: 100, // ⬅️ Added spacing below images
+    paddingBottom: 60,
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginTop: -20,
+    marginBottom: 10,
+    color: '#000',
+  },
+  description: {
+    fontSize: 14,
+    color: '#444',
+    textAlign: 'justify',
+    marginBottom: 10,
   },
   buttonText: {
     color: '#fff',

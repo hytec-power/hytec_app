@@ -13,10 +13,10 @@ import { Ionicons } from '@expo/vector-icons';
 
 export default function Cyber2ndScreen({ navigation }) {
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
+    <SafeAreaView style={styles.safeArea}>
+      <StatusBar barStyle="light-content" backgroundColor="#640000" />
 
-      {/* Header with Back Button */}
+      {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Ionicons name="arrow-back" size={28} color="#fff" />
@@ -25,9 +25,10 @@ export default function Cyber2ndScreen({ navigation }) {
         <View style={{ width: 28 }} />
       </View>
 
+      {/* Scrollable Content */}
       <ScrollView
         style={styles.scrollWrapper}
-        contentContainerStyle={{ paddingBottom: 50 }}
+        contentContainerStyle={{ paddingBottom: 140 }}
         showsVerticalScrollIndicator={false}
       >
         {/* Mission Section */}
@@ -35,7 +36,7 @@ export default function Cyber2ndScreen({ navigation }) {
           <View style={styles.textContainer}>
             <Text style={styles.sectionTitle}>Mission</Text>
             <Text style={styles.sectionText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus nec leo at lobortis. Integer vel quam tempor, aliquam sem lobortis, cursus nibh. In malesuada mi vel scelerisque suscipit. Donec luctus, neque sed aliquam ullamcorper, leo sapien tincidunt erat, vel condimentum nunc ipsum sit amet massa.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus nec leo at lobortis. Integer vel quam tempor, aliquam sem lobortis, cursus nibh. In malesuada mi vel scelerisque suscipit.
             </Text>
           </View>
           <View style={styles.imageContainer}>
@@ -58,10 +59,10 @@ export default function Cyber2ndScreen({ navigation }) {
               resizeMode="cover"
             />
           </View>
-          <View style={styles.textContainer}>
+          <View style={styles.visionTextContainer}>
             <Text style={styles.sectionTitle}>Vision</Text>
             <Text style={styles.sectionText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus nec leo at lobortis. Integer vel quam tempor, aliquam sem lobortis, cursus nibh. In malesuada mi vel scelerisque suscipit. Donec luctus, neque sed aliquam ullamcorper, leo sapien tincidunt erat, vel condimentum nunc ipsum sit amet massa.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus nec leo at lobortis. Integer vel quam tempor, aliquam sem lobortis, cursus nibh. In malesuada mi vel scelerisque suscipit.
             </Text>
           </View>
         </View>
@@ -70,15 +71,15 @@ export default function Cyber2ndScreen({ navigation }) {
         <View style={styles.coreValues}>
           <Text style={styles.coreTitle}>Core Values</Text>
           <Text style={styles.coreText}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus nec leo at
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus nec leo at.
           </Text>
         </View>
       </ScrollView>
 
-      {/* NEXT Button */}
+      {/* Fixed NEXT Button */}
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('Cyber3rdScreen')}
+        onPress={() => navigation.navigate('Cyber4thScreen')}
       >
         <Text style={styles.buttonText}>NEXT</Text>
       </TouchableOpacity>
@@ -87,23 +88,18 @@ export default function Cyber2ndScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  safeArea: {
     flex: 1,
     backgroundColor: '#fff',
   },
   header: {
-    height: 100,
+    height: 80,
     backgroundColor: '#640000',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
     paddingTop: 10,
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    zIndex: 99,
   },
   headerText: {
     color: '#fff',
@@ -111,13 +107,11 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   scrollWrapper: {
-    marginTop: 100,
-    marginBottom: 50,
+    flex: 1,
     paddingHorizontal: 20,
   },
   section: {
-    marginBottom: 40,
-    backgroundColor: "#fff",
+    marginVertical: 20,
   },
   rowSection: {
     flexDirection: 'row',
@@ -129,30 +123,37 @@ const styles = StyleSheet.create({
     paddingHorizontal: 4,
     justifyContent: 'center',
   },
+  visionTextContainer: {
+    flex: 1,
+    paddingHorizontal: 4,
+    justifyContent: 'center',
+    marginTop: 30, // Adjust as needed to shift Vision content higher
+    marginLeft: 15,
+  },
   sectionTitle: {
     fontSize: 26,
     fontWeight: 'bold',
-    color: "#000",
+    color: '#000',
     marginBottom: 6,
     marginTop: 8,
   },
   sectionText: {
     fontSize: 13,
-    color: "#222",
-    marginBottom: 12,
+    color: '#222',
+    marginBottom: 50,
   },
   imageContainer: {
     width: 155,
     height: 115,
     marginLeft: 18,
     marginRight: 18,
-    justifyContent: "center",
-    alignItems: "center",
-    position: "relative",
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative',
   },
   redBackgroundMission: {
     position: 'absolute',
-    top: 40,
+    top: 20,
     left: -10,
     width: 242.45,
     height: 199.95,
@@ -163,12 +164,12 @@ const styles = StyleSheet.create({
   },
   redBackgroundVision: {
     position: 'absolute',
-    top: -10,
-    right: 0,
+    top: 20,
+    right: -5,
     width: 242.48,
     height: 199.95,
     backgroundColor: '#bc1010',
-    borderRadius: 6,
+    borderRadius: 7,
     transform: [{ rotate: '10deg' }],
     zIndex: 1,
   },
@@ -177,7 +178,7 @@ const styles = StyleSheet.create({
     height: 199.95,
     borderRadius: 6,
     position: 'absolute',
-    top: 30,
+    top: 10,
     left: 10,
     transform: [{ rotate: '10deg' }],
     zIndex: 2,
@@ -187,26 +188,26 @@ const styles = StyleSheet.create({
     height: 199.95,
     borderRadius: 6,
     position: 'absolute',
-    top: -30,
+    top: 0,
     right: 10,
     transform: [{ rotate: '10deg' }],
     zIndex: 2,
   },
   coreValues: {
     alignItems: 'center',
-    marginTop: 5,
-    marginBottom: 70,
+    marginTop: 10,
+    marginBottom: 30,
   },
   coreTitle: {
     fontSize: 26,
     fontWeight: 'bold',
-    color: "#000",
-    marginBottom: 2,
+    color: '#000',
+    marginBottom: 5,
   },
   coreText: {
     fontSize: 13,
-    color: "#222",
-    textAlign: "center",
+    color: '#222',
+    textAlign: 'center',
     lineHeight: 18,
   },
   button: {
@@ -216,9 +217,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'center',
     position: 'absolute',
-    bottom: 120,
+    bottom: 30,
     left: 30,
     right: 30,
+    elevation: 5,
   },
   buttonText: {
     color: '#fff',
